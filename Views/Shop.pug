@@ -1,0 +1,61 @@
+extends Layout/Main-layout.pug 
+
+block content
+          main
+            if prods.length>0
+                .grid
+                    each product in prods
+                        article.card.product-item
+                            header.card__header
+                                h1.product__title #{product.title}
+
+                            .card__content
+                                h2.product__price Rs 90
+                                p.product__description A very interesting #{product.title}
+                            .card__action
+                                button.btn Add To Cart    
+            //- each product in prods
+                h1 My #{product.title}
+
+            else
+                h1 No Product
+
+
+
+
+
+//- <!DOCTYPE html>
+//- html(lang="en")
+//-     head
+//-         meta(charset="UTF-8")
+//-         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+//-         title #{docTitle}
+//-         link(rel="stylesheet", href="/Main.css")
+        
+
+//-     body
+//-         header.main-header
+//-             nav.main-header_navbar
+//-                 ul.main-header-list_items
+//-                     li.main-header_items
+//-                         a.active(href="/") Shop
+//-                     li.main-header_items 
+//-                         a(href="/add-product") Add Product 
+//-         main
+//-             if prods.length>0
+//-                 .grid
+//-                     each product in prods
+//-                         article.card.product-item
+//-                             header.card__header
+//-                                 h1.product__title #{product.title}
+
+//-                             .card__content
+//-                                 h2.product__price Rs 90
+//-                                 p.product__description A very interesting #{product.title}
+//-                             .card__action
+//-                                 button.btn Add To Cart    
+//-             //- each product in prods
+//-                 h1 My #{product.title}
+
+//-             else
+//-                 h1 No Product
